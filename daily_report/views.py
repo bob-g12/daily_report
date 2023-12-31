@@ -43,3 +43,19 @@ class WriteView(View):
         return redirect(to='index')
     
 write = WriteView.as_view()
+
+class editView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'daily_report/edit.html')
+
+    def post(self, request, *args, **kwargs):
+        # formに書いた内容を格納する
+        form = WriteForm(request.POST)
+        # 保存する前に一旦取り出す
+        post = form.save(commit=False)
+        # 保存
+        post.save()
+        # indexのviewに移動
+        return redirect(to='index')
+
+edit = editView.as_view()

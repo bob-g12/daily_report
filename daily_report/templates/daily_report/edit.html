@@ -1,0 +1,12 @@
+{% extends "daily_report/base.html" %}
+
+{% block page_title %}投稿{% endblock %}
+{% block title %}投稿{% endblock %}
+
+{% block content %}
+    <form method="post" action="{% url 'write' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="button">編集</button>
+    </form>
+{% endblock %}
