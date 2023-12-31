@@ -7,20 +7,9 @@ from django.views.generic import View
 from django.shortcuts import redirect
 
 from .forms import WriteForm
-
-def form(request):
-  Article.title = 1
-  content = {
-  'message': 'こんにちは！Djangoテンプレート！'
-  }
-  print(Article.title)
-  return render(request, 'daily_report/form.html', content)
-
-# Create your views here.
-
   
 class IndexView(View):
-    def get(self,request, *args, **kwargs):
+    def get(self,request):
         
         queryset = Article.objects.all().order_by('-created_at')
 
@@ -30,7 +19,7 @@ class IndexView(View):
 index = IndexView.as_view()
 
 class WriteView(View):
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         return render(request, 'daily_report/write.html', {'form': WriteForm})
 
     def post(self, request, *args, **kwargs):
@@ -46,7 +35,7 @@ class WriteView(View):
 write = WriteView.as_view()
 
 class editView(View):
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         return render(request, 'daily_report/edit.html', {'form': WriteForm})
 
     def post(self, request, *args, **kwargs):

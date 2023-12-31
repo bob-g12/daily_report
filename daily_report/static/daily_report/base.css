@@ -43,11 +43,3 @@ nav ul li{
 .content{
     margin: 20px 50px;
 }
-
-.btn {
-    border-radius: 5px;
-    background-color: lightblue;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-  }
