@@ -1,6 +1,11 @@
 from django.db import models
 
+from django.utils import timezone
 class Article(models.Model):
+
+    class Meta(object):
+        #作成されるテーブル名を指定
+        db_table = 'posts'
 
     day = models.DateField('稼働日',blank=True, null=True)
     name = models.CharField('運転者名', max_length=20, blank=True, null=True)
@@ -11,3 +16,10 @@ class Article(models.Model):
     oiling = models.IntegerField('給油',blank=True, null=True)
     oiling2 = models.IntegerField('給油',blank=True, null=True)
     oil = models.IntegerField('オイル',blank=True, null=True)
+
+    text = models.CharField(verbose_name='本文', max_length=255, blank=True, null=True)
+    created_at = models.DateField(verbose_name='作成日', default=timezone.now, blank=True, null=True)
+
+    def __str__(self):
+        return self.text, self.created_at
+

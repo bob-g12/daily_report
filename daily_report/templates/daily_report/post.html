@@ -1,0 +1,12 @@
+{% extends "daily_report/base.html" %}
+{% block page_title %}post{% endblock %}
+{% block title %}post{% endblock %}
+{% block content %}
+    {% for post in posts %}      
+    <div class="post">
+        <p class="text">{{ post.text }}</p>
+        {{ post.created_at }}
+        <hr>
+    </div>
+    {% endfor %}
+{% endblock %}

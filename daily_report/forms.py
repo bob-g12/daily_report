@@ -1,9 +1,10 @@
 from django import forms
+from .models import Article
 
-from snippets.models import Article
 
-
-class SnippetForm(Article.ModelForm):
+class WriteForm(forms.ModelForm):
     class Meta:
+        #モデルを指定
         model = Article
-        fields = ('day', 'name')
+        #フォームとして表示したいカラムを指定
+        fields = ('text',)
