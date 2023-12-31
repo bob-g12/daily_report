@@ -21,5 +21,4 @@ class Article(models.Model):
     created_at = models.DateField(verbose_name='作成日', default=timezone.now, blank=True, null=True)
 
     def __str__(self):
-        return self.text, self.created_at
-
+        return self.text, self.created_at, self.day, self.name, self.car_number, self.weather, self.start, self.end, self.oiling, self.oiling2, self.oil
