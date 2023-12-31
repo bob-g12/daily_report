@@ -7,6 +7,7 @@ from django.views.generic import View
 from django.shortcuts import redirect
 
 from .forms import WriteForm
+
 def form(request):
   Article.title = 1
   content = {
@@ -46,7 +47,7 @@ write = WriteView.as_view()
 
 class editView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'daily_report/edit.html')
+        return render(request, 'daily_report/edit.html', {'form': WriteForm})
 
     def post(self, request, *args, **kwargs):
         # formに書いた内容を格納する
