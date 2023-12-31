@@ -17,7 +17,7 @@ class Article(models.Model):
     oiling2 = models.IntegerField('給油',blank=True, null=True)
     oil = models.IntegerField('オイル',blank=True, null=True)
 
-    text = models.CharField(verbose_name='本文', max_length=255, blank=True, null=True)
+    text = models.CharField(verbose_name='備考欄', max_length=255, blank=True, null=True)
     created_at = models.DateField(verbose_name='作成日', default=timezone.now, blank=True, null=True)
 
     def __str__(self):
