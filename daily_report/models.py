@@ -6,7 +6,7 @@ class Article(models.Model):
     class Meta(object):
         #作成されるテーブル名を指定
         db_table = 'posts'
-
+    #項目作成
     day = models.DateField('稼働日',blank=True, null=True)
     name = models.CharField('運転者名', max_length=20, blank=True, null=True)
     car_number = models.CharField('車両No', max_length=10, blank=True, null=True)
@@ -16,9 +16,9 @@ class Article(models.Model):
     oiling = models.IntegerField('給油',blank=True, null=True)
     oiling2 = models.IntegerField('給油',blank=True, null=True)
     oil = models.IntegerField('オイル',blank=True, null=True)
-
     text = models.CharField(verbose_name='備考欄', max_length=255, blank=True, null=True)
     created_at = models.DateField(verbose_name='作成日', default=timezone.now, blank=True, null=True)
 
     def __str__(self):
+        #項目出力
         return self.text, self.created_at, self.day, self.name, self.car_number, self.weather, self.start, self.end, self.oiling, self.oiling2, self.oil
