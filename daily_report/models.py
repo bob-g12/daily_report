@@ -21,4 +21,4 @@ class Article(models.Model):
 
     def __str__(self):
         #項目出力
-        return self.text, self.created_at, self.day, self.name, self.car_number, self.weather, self.start, self.end, self.oiling, self.oiling2, self.oil
+        return str(self.text)#, self.created_at, self.day, self.name, self.car_number, self.weather, self.start, self.end, self.oiling, self.oiling2, self.oil

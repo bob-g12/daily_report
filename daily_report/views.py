@@ -4,9 +4,11 @@ from daily_report.models import Article
 
 from django.views.generic import View
 
-from django.shortcuts import redirect
+from django.shortcuts import redirect ,get_object_or_404
 
-from .forms import WriteForm
+from .forms import WriteForm 
+
+from django.forms import ModelForm
   
 class IndexView(View):
     def get(self,request):
@@ -35,12 +37,16 @@ class WriteView(View):
 write = WriteView.as_view()
 
 class editView(View):
-    def get(self, request):
-        return render(request, 'daily_report/edit.html', {'form': WriteForm})
+    def get(self, request, post_id):
+        print("EEEE")
+        post = get_object_or_404(Article, pk=post_id)
+        edit_form = WriteForm(instance=post)
+        return render(request, 'daily_report/edit.html', {'form': edit_form,'post':post})
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request, post_id ,*args, **kwargs):
+        post = get_object_or_404(Article, pk=post_id)
         # formに書いた内容を格納する
-        form = WriteForm(request.POST)
+        form = WriteForm(request.POST, instance=post)
         # 保存する前に一旦取り出す
         post = form.save(commit=False)
         # 保存
@@ -49,3 +55,13 @@ class editView(View):
         return redirect(to='index')
 
 edit = editView.as_view()
+
+def exclude(request, post_id):
+    post = get_object_or_404(Article, pk=post_id)
+    post.delete()
+
+    posts =  Article.objects.all()
+    context = {
+        'articles': posts,
+    }
+    return render(request, 'daily_report/post.html', context)

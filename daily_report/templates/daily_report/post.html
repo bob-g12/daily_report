@@ -10,7 +10,7 @@
         
         <hr>
     </div>
-    <button onclick="location.href='edit'">編集</button>
-    <button onclick="location.href='edit'">削除</button>
+    <button onclick="location.href='{% url 'edit' post.id %}'">編集</button>
+    <button onclick="location.href='{% url 'exclude' post.id %}'">削除</button>
     {% endfor %}
 {% endblock %}
