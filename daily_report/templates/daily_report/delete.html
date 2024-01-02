@@ -1,0 +1,6 @@
+{% extends "daily_report/base.html" %}
+
+{% block page_title %}削除{% endblock %}
+{% block title %}削除しますか？{% endblock %}
+
+<button onclick="location.href='{% url 'exclude' post.id %}'">削除</button>
