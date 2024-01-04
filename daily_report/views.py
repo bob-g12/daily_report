@@ -53,7 +53,7 @@ class editView(View):
         post = get_object_or_404(Article, pk=post_id)
         # formに書いた内容を編集元へ更新(instance=post)
         form = WriteForm(request.POST, instance=post)
-        # 保存する前に一旦取り出す
+        # 保存する前に一旦取り出す☆後に理解すべし!!!
         post = form.save(commit=False)
         # 保存
         post.save()
