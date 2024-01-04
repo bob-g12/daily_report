@@ -43,3 +43,19 @@ nav ul li{
 .content{
     margin: 20px 50px;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+form p {
+    display: flex;
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+}
+
+form label {
+    width: 30%;
+}
