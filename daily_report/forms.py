@@ -21,30 +21,48 @@ class WriteForm(forms.ModelForm):
             'oil',
             'text'
             )
-        BIRTH_YEAR_CHOICES = ["1980", "1981", "1982"]
-        
+        error_messages = {
+            'name':{
+                'required': "名前を入力してくだちい",
+            },
+        }
         widgets = {
-            'day': forms.DateInput(attrs={
-                "type": "date"
+            'day': forms.DateInput(
+                attrs={
+                "type": "date",
+                'required' : True
             }),
-            "start": forms.TimeInput(attrs={
-                "type": "time"
+            'name': forms.TextInput(
+                attrs={
+                'placeholder': "お名前を入力してください",
+                'required' : True
             }),
-            "end": forms.TimeInput(attrs={
-                "type": "time"
+            'car_number': forms.TextInput(
+                attrs={
+                'placeholder': "例)88-88",
+                'required' : True
             }),
-            'weather':forms.Select(choices=(
+            "start": forms.TimeInput(
+                attrs={
+                "type": "time",
+                'required' : True
+            }),
+            "end": forms.TimeInput(
+                attrs={
+                "type": "time",
+                'required' : True
+            }),
+            'weather':forms.Select(
+                choices=(
                 ('','天気を選択'),
                 ('0','晴れ'),
                 ('1','曇り'),
                 ('2','雨'),
                 ('3','雪'),
-            )),
-            'name': forms.TextInput(attrs={
-                'placeholder': "お名前を入力してください",
-                'required' : True
-                },
-            ),
+                ),
+                attrs={
+                'required' : '天気を選択'
+            }),
         }
         
         
