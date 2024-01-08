@@ -1,5 +1,8 @@
 from django import forms
 from .models import Article
+from django.core.exceptions import NON_FIELD_ERRORS
+
+
 
 class WriteForm(forms.ModelForm):
     class Meta:
@@ -19,6 +22,7 @@ class WriteForm(forms.ModelForm):
             'text'
             )
         BIRTH_YEAR_CHOICES = ["1980", "1981", "1982"]
+        
         widgets = {
             'day': forms.DateInput(attrs={
                 "type": "date"
@@ -37,9 +41,10 @@ class WriteForm(forms.ModelForm):
                 ('3','雪'),
             )),
             'name': forms.TextInput(attrs={
-                'placeholder': "お名前を入力してください"
-            }),
-            
-            }
+                'placeholder': "お名前を入力してください",
+                'required' : True
+                },
+            ),
+        }
         
         
