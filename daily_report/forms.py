@@ -63,6 +63,11 @@ class WriteForm(forms.ModelForm):
                 attrs={
                 'required' : '天気を選択'
             }),
+            'text':forms.Textarea(
+                attrs={
+                'rows':8, 'cols':30,
+                'placeholder': "連絡事項や追加の記入はこちら",
+            }),  
         }
         
         
