@@ -11,6 +11,17 @@
         <hr>
     </div>
     <button onclick="location.href='{% url 'edit' post.id %}'">編集</button>
-    <button onclick="location.href='{% url 'exclude' post.id %}'">削除</button>
+    <dialog id="dialog">
+        <h5>削除してもよろしいですか？</h5>
+        <button onclick="location.href='{% url 'exclude' post.id %}'">
+            はい
+        </button>
+        <button type="button" onclick="document.getElementById('dialog').close();">
+            いいえ
+        </button> 
+    </dialog>
+    <button type="button" onclick="document.getElementById('dialog').show();">
+        削除
+    </button>
     {% endfor %}
 {% endblock %}
