@@ -4,24 +4,26 @@
 {% block content %}
     {% for post in posts %}      
     <div class="post">
-        {{ post.car_number }}
+        <p class="car_number">{{ post.car_number }}</p>
         <p class="name">{{ post.name }}</p>
         <p class="day">{{ post.day }}</p>
-        
         <hr>
     </div>
     <button onclick="location.href='{% url 'edit' post.id %}'">編集</button>
-    <dialog id="dialog">
-        <h5>削除してもよろしいですか？</h5>
-        <button onclick="location.href='{% url 'exclude' post.id %}'">
-            はい
-        </button>
-        <button type="button" onclick="document.getElementById('dialog').close();">
-            いいえ
-        </button> 
-    </dialog>
-    <button type="button" onclick="document.getElementById('dialog').show();">
+    <button type="button"  onclick="document.getElementById({{post.id}}).show('post.id');">
         削除
     </button>
+    <div class=dialog>
+        <dialog id={{post.id}}>
+            <h2><span style="font-size:180%;"><font color="#FF6666">削除</font></span>してもよろしいですか？</h2>
+            <button onclick="location.href='{% url 'exclude' post.id %}'">
+                はい
+            </button>
+            <button type="button" onclick="document.getElementById({{post.id}}).close();">
+                いいえ
+            </button>
+            
+        </dialog>
+    </div>
     {% endfor %}
 {% endblock %}

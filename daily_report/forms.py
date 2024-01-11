@@ -21,11 +21,6 @@ class WriteForm(forms.ModelForm):
             'oil',
             'text'
             )
-        error_messages = {
-            'name':{
-                'required': "名前を入力してくだちい",
-            },
-        }
         widgets = {
             'day': forms.DateInput(
                 attrs={
@@ -68,6 +63,11 @@ class WriteForm(forms.ModelForm):
                 'rows':8, 'cols':30,
                 'placeholder': "連絡事項や追加の記入はこちら",
             }),  
+        }
+        error_messages = {
+            'name':{
+                'required':"投稿者名が入力されていません",
+            },
         }
         
         

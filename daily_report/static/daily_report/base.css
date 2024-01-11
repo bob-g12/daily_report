@@ -59,3 +59,14 @@ form p {
 form label {
     width: 30%;
 }
+
+
+.dialog {
+    position: relative;
+    width  :75%;
+    padding:10px;
+    top    :-185px;
+    left   :150px;
+}
+  
+
