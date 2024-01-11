@@ -60,6 +60,18 @@ form label {
     width: 30%;
 }
 
+form span {
+    margin-left: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #166ab5;
+    display: flex;
+
+}
+
 
 .dialog {
     position: relative;
