@@ -7,7 +7,63 @@
     <form method="post" action="{% url 'write' %}">
         {% csrf_token %}
         <div id="form" style="">
-            {{ form.as_p }}
+            <p>
+                <label for="id_day">稼働日:</label>
+                <input type="date" name="day" required="" id="id_day">
+                <span>必須</span>
+            </p>
+            <p>
+                <label for="id_name">運転者名:</label>
+                <input type="text" name="name" placeholder="お名前を入力してください" required="" maxlength="20" id="id_name">   
+                <span>必須</span>
+            </p>
+            <p>
+                <label for="id_car_number">車両No:</label>
+                <input type="text" name="car_number" placeholder="例)88-88" required="" maxlength="5" id="id_car_number">    
+                <span>必須</span>
+            </p>
+            <p>
+                <label for="id_weather">天気:</label>
+                <select name="weather" required="天気を選択" maxlength="5" id="id_weather">
+                    <option value="" selected="">天気を選択</option>
+
+                    <option value="0">晴れ</option>
+
+                    <option value="1">曇り</option>
+
+                    <option value="2">雨</option>
+
+                    <option value="3">雪</option>
+
+                </select>   
+                <span>必須</span>             
+            </p>
+            <p>
+                <label for="id_start">始業時間:</label>
+                <input type="time" name="start" required="" id="id_start">
+                <span>必須</span>                
+            </p>            
+            <p>
+                <label for="id_end">終業時間:</label>
+                <input type="time" name="end" required="" id="id_end">
+                <span>必須</span>                
+            </p>            
+            <p>
+                <label for="id_oiling">給油:</label>
+                <input type="number" name="oiling" step="any" id="id_oiling">                
+            </p>            
+            <p>
+                <label for="id_oiling2">給油:</label>
+                <input type="number" name="oiling2" step="any" id="id_oiling2">                
+            </p>            
+            <p>
+                <label for="id_oil">オイル:</label>
+                <input type="number" name="oil" step="any" id="id_oil">                
+            </p>           
+            <p>
+                <label for="id_text">備考欄:</label>
+                <textarea name="text" cols="30" rows="8" placeholder="連絡事項や追加の記入はこちら" maxlength="255" id="id_text"></textarea>                
+            </p>
         </div>
         <button type="submit" class="button">投稿</button>
     </form>
