@@ -22,6 +22,7 @@ index = IndexView.as_view()
 class WriteView(View):
     # 新規入力画面へ
     def get(self, request):
+        
         return render(request, 'daily_report/write.html', {'form': WriteForm})
     # 投稿機能
     def post(self, request):
@@ -32,6 +33,7 @@ class WriteView(View):
         # 保存
         post.save()
         # トップ画面へ
+        
         return redirect(to='index')
     
 write = WriteView.as_view()

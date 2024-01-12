@@ -10,7 +10,7 @@
         <hr>
     </div>
     <button onclick="location.href='{% url 'edit' post.id %}'">編集</button>
-    <button type="button"  onclick="document.getElementById({{post.id}}).show('post.id');">
+    <button type="button"  onclick="document.getElementById('{{post.id}}').show();">
         削除
     </button>
     <div class=dialog>
@@ -19,10 +19,9 @@
             <button onclick="location.href='{% url 'exclude' post.id %}'">
                 はい
             </button>
-            <button type="button" onclick="document.getElementById({{post.id}}).close();">
+            <button type="button" onclick="document.getElementById('{{post.id}}').close();">
                 いいえ
             </button>
-            
         </dialog>
     </div>
     {% endfor %}
