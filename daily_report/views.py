@@ -71,7 +71,7 @@ def review(request, post_id):
 def exclude(request, post_id): 
     # 処理したいデータを指定
     post = get_object_or_404(Article, pk=post_id)
-    # キミ消す
+    # 指定のデータ削除
     post.delete()
     # トップ画面へ
     return redirect(to='index')
