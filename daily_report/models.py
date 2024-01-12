@@ -12,7 +12,8 @@ class Article(models.Model):
         
         #作成されるテーブル名を指定
         db_table = 'posts'
-        verbose_name = 'verbose_name'
+        #管理画面でのモデルの名称
+        verbose_name = '投稿一覧'
     #項目作成
     day = models.DateField('稼働日',blank=True, null=True,max_length=10)
     name = models.CharField('運転者名', max_length=20, blank=True, null=True)
