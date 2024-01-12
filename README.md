@@ -18,10 +18,12 @@ sqlite3
 >投稿の左、topでtoppageへ戻れます。
 >各投稿の車両番号/お名前/乗車日が表示。
 <img width="500" alt="image" src="https://github.com/bob-g12/daily_report/assets/126374166/7fef6584-3c2e-4b23-bbab-a069763a5104">
+
 ### 投稿画面
 >投稿は一部カレンダーや選択肢による入力が可能です。必須マークのある項目が抜けていると投稿出来ず、入力を求めます。
 <img width="500" alt="image" src="https://github.com/bob-g12/daily_report/assets/126374166/0b7c94ce-9db3-491d-92c6-f936bde8f009">
 <img width="500" alt="image" src="https://github.com/bob-g12/daily_report/assets/126374166/aa203f28-89dc-41bb-b021-b0d60560de00">
+
 ### 編集/削除
 >投稿ごとに編集ボタンがあり、過去の投稿内容が反映された状態から編集ができます。
 >投稿ごとに削除ボタンがあり、押すとダイアログにて確認を挟み、投稿の削除ができます。
