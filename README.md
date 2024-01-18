@@ -21,7 +21,7 @@ vscode
 ### 拡張機能
 ||機能|用途|
 | ---- | ---- | ---- |
-|**`必須`** | Python |VScodeでpythonを使用するため|
+|**`必須`** | Python |VScodeでPythonを使用するため|
 |**`必須`** | SQLite |VScodeでSQLiteを使用するため|
 |**`必須`** | Bootstrap 5 Quick Snippets |VScodeでBootstrapを使用するため|
 |**`必須`** | Django Template |クォーテーションの入れ子を解消するために実装|
