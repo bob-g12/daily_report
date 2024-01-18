@@ -19,7 +19,7 @@ sqlite3
 ### 開発ツール
 vscode
 ### 拡張機能
-- Python(必須)
+- #### Python(必須)
 - 
 VScodeでpythonを使用するため
 #### - SQLite(必須)
