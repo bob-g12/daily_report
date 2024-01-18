@@ -12,18 +12,18 @@
 ## サイトの公開
 >現在サイトの公開はしておりません
 ## 使用言語等
-### 言語
+### * 言語
 Python / HTML / CSS / Javascript
 ### データベース
 sqlite3
 ### 開発ツール
 vscode
 ### 拡張機能
-#### *Python(必須)
+#### Python(必須)
 VScodeでpythonを使用するため
-#### *SQLite(必須)
+#### SQLite(必須)
 VScodeでSQLiteを使用するため
-#### *Bootstrap 5 Quick Snippets(必須)
+#### Bootstrap 5 Quick Snippets(必須)
 VScodeでSQLiteを使用するため
 #### Django Template(必須)
 クォーテーションの入れ子を解消するために実装
