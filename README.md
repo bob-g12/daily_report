@@ -12,14 +12,14 @@
 ## サイトの公開
 >現在サイトの公開はしておりません
 ## 使用言語等
-### * 言語
+### 言語
 Python / HTML / CSS / Javascript
 ### データベース
 sqlite3
 ### 開発ツール
 vscode
 ### 拡張機能
-#### Python(必須)
+:::details Python(必須)
 VScodeでpythonを使用するため
 #### SQLite(必須)
 VScodeでSQLiteを使用するため
