@@ -21,7 +21,7 @@ vscode
 ### 拡張機能
 |機能|用途|
 | ---- | ---- |
-|Python <span style="color: red; "> 必須 </span> |VScodeでpythonを使用するため|
+|Python <span style="color: red; ">必須</span> |VScodeでpythonを使用するため|
 |SQLite(必須)|VScodeでSQLiteを使用するため|
 |Bootstrap 5 Quick Snippets(必須)|VScodeでBootstrapを使用するため|
 |Django Template(必須)|クォーテーションの入れ子を解消するために実装|
