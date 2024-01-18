@@ -19,17 +19,17 @@ sqlite3
 ### 開発ツール
 vscode
 ### 拡張機能
-|機能|用途|
-| ---- | ---- |
-|**`必須`** Python |VScodeでpythonを使用するため|
-|**`必須`** SQLite |VScodeでSQLiteを使用するため|
-|**`必須`** Bootstrap 5 Quick Snippets |VScodeでBootstrapを使用するため|
-|**`必須`** Django Template |クォーテーションの入れ子を解消するために実装|
-|Japanese Language Pack for Visual Studio Code|vscodeを日本語表記に変更するため|
-|Git Lens|コミット時期を表示するため|
-|Git History|コミット履歴の確認等をするため|
-|jQuery Code Snippets|jQueryメソッドの記述を補完|
-|Pylance|Pythonの入力補完|
+||機能|用途|
+| ---- | ---- | ---- |
+|**`必須`** | Python |VScodeでpythonを使用するため|
+|**`必須`** | SQLite |VScodeでSQLiteを使用するため|
+|**`必須`** | Bootstrap 5 Quick Snippets |VScodeでBootstrapを使用するため|
+|**`必須`** | Django Template |クォーテーションの入れ子を解消するために実装|
+|| Japanese Language Pack for Visual Studio Code|vscodeを日本語表記に変更するため|
+|| Git Lens|コミット時期を表示するため|
+|| Git History|コミット履歴の確認等をするため|
+|| jQuery Code Snippets|jQueryメソッドの記述を補完|
+|| Pylance|Pythonの入力補完|
 
 ## 機能
 ### toppage
