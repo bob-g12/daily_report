@@ -34,7 +34,9 @@ vscode
 ## 機能
 ### toppage
 >画面右上の投稿ボタンにて投稿ページへ進みます。
+>
 >投稿の左、topでtoppageへ戻れます。
+>
 >各投稿の車両番号/お名前/乗車日が表示。
 
 <img width="500" alt="image" src="https://github.com/bob-g12/daily_report/assets/126374166/7fef6584-3c2e-4b23-bbab-a069763a5104">
@@ -47,11 +49,22 @@ vscode
 
 ### 編集/削除
 >投稿ごとに編集ボタンがあり、過去の投稿内容が反映された状態から編集ができます。
+>
 >投稿ごとに削除ボタンがあり、押すとダイアログにて確認を挟み、投稿の削除ができます。
 
 <img width="500" alt="image" src="https://github.com/bob-g12/daily_report/assets/126374166/f54a1beb-bf22-4f7b-b045-d605d42c27c6">
 <img width="500" alt="image" src="https://github.com/bob-g12/daily_report/assets/126374166/1ca40ba6-d2ff-419b-9ef9-f564a349a109">
 
+### update予定
+>ログイン機能を実装し、削除権限を持ったアカウントや、扱う投稿の制限などを可能にする。
+>
+>投稿データをExcelに挿入する機能
+>
+>ダイアログのデザインを変更
+>
+>車両ごとに投稿ページをわける
+>
+>車両の点検項目を追加
 
 
 
