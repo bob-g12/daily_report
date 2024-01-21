@@ -11,18 +11,18 @@ from .forms import WriteForm
 # トップページを表示する機能
 class IndexView(View):
     def get(self,request):
-        # 記録してある投稿の全データ
+        # 記録してある投稿の全データを投稿時間を元にソートして表示
         queryset = Article.objects.all().order_by('-created_at')
         # トップページのhtmlへ記録データを乗せ移行
         return render(request, 'daily_report/post.html', {'posts': queryset})
 
-
+# toppageの表示
 index = IndexView.as_view()
 # 投稿機能
 class WriteView(View):
     # 新規入力画面へ
-    def get(self, request):
-        
+    def get(self, request):  
+        # 投稿ボタンで投稿ページへ
         return render(request, 'daily_report/write.html', {'form': WriteForm})
     # 投稿機能
     def post(self, request):
@@ -33,7 +33,6 @@ class WriteView(View):
         # 保存
         post.save()
         # トップ画面へ
-        
         return redirect(to='index')
     
 write = WriteView.as_view()
@@ -63,11 +62,11 @@ class editView(View):
         return redirect(to='index')
 
 edit = editView.as_view()
-
+# 削除機能
 def review(request, post_id):
     return render(request, 'daily_report/delete.html',{'post_id':post_id})
 
-#削除の機能
+# 削除の機能
 def exclude(request, post_id): 
     # 処理したいデータを指定
     post = get_object_or_404(Article, pk=post_id)
