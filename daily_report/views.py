@@ -66,7 +66,7 @@ edit = editView.as_view()
 def review(request, post_id):
     return render(request, 'daily_report/delete.html',{'post_id':post_id})
 
-# 削除の機能
+#削除の機能
 def exclude(request, post_id): 
     # 処理したいデータを指定
     post = get_object_or_404(Article, pk=post_id)

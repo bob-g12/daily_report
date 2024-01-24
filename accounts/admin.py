@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+# 同じディレクトリにあるmodels.pyからクラスのAccountをインポート
+from .models import Account
+
+# 管理ページに登録
+admin.site.register(Account)
